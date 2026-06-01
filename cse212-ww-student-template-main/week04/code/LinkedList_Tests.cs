@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 public class InsertTailTests
 {
     [TestMethod]
-    public void InsertTail_Empty()
+    public void InsertTail_Empty(int value)
     {
         var ll = new LinkedList();
 
@@ -42,7 +42,7 @@ public class InsertTailTests
 public class RemoveTailTests
 {
     [TestMethod]
-    public void RemoveTail_Empty()
+    public void RemoveTail_Empty(int value)
     {
         var ll = new LinkedList();
 
@@ -106,7 +106,7 @@ public class RemoveTests
     }
 
     [TestMethod]
-    public void Remove_Empty()
+    public void Remove_Empty(int value)
     {
         var ll = new LinkedList();
         ll.Remove(0);
@@ -173,7 +173,7 @@ public class ReplaceTests
     }
 
     [TestMethod]
-    public void Replace_Empty()
+    public void Replace_Empty(int oldValue, int newValue)
     {
         var ll = new LinkedList();
 
@@ -216,7 +216,7 @@ public class ReverseTests
     {
         var ll = new LinkedList();
         ll.InsertHead(5);
-        Assert.AreEqual("<IEnumerable>{5}", ll.Reverse().AsString());
+        Assert.AreEqual("<IEnumerable>{0}", ll.Reverse().AsString());
     }
 
     [TestMethod]
